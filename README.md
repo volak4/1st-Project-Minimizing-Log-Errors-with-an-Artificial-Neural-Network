@@ -17,9 +17,13 @@ The project is divided into four sections, each section is described in a corres
 * **[Part 5: XgBoost](XgBoost.ipynb)** — we will run the latest the most popular Machine learning algorithm and compare results.
 
 * **[Appendix A - Univariate Exploration of all Continous Features](AppendixA.py)** — We will take a univarte analysis of all continous features in the dataset. 
+
 * **[Appendix B - Univariate Exploration of all Categorical Features]((AppendixA.py)** — We will take a univarte analysis of all categorical features in the dataset. 
+
 * **[Appendix C - Bivariate Exploration of all Continous Features]((AppendixA.py)** — We will take a univarte analysis of all continous features in the dataset. 
+
 * **[Appendix D - Bivariate Exploration of all Categorical Features]((AppendixA.py)** — We will take a univarte analysis of all categorical features in the dataset. 
+
 * **[Appendix E - Ordinary Least Sqaures Exploration of All Features]((AppendixA.py)** — We will take a univarte analysis of all categorical features in the dataset. 
 
 You can also read a [Capstone Report](report.md) which summarizes the implementation as well as the methodology of the whole project without going deep into details.
