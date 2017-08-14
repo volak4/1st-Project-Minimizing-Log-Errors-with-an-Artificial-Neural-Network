@@ -28,7 +28,7 @@ The project is divided into five sections, each section is described in a corres
 
 * **[Appendix E - Bivariate Exploration of all Categorical Features](Section6_AppendixE_BiVarCat.py)** — We will take a univarte analysis of all categorical features in the dataset. 
 
-* **[Appendix F - OLS Regression of all features](Section6_AppendixF - OLS_Regression_of_All_Features.ipynb)** — Even though we know that it is highly unlikeyl that the features are independent of each other, we will run an OLS regression on each of the features to have a general comparison of the importance of certain features. 
+* **[Appendix F - OLS Regression of all features](Section6_AppendixF_OLS_Regression_of_All_Features.ipynb)** — Even though we know that it is highly unlikeyl that the features are independent of each other, we will run an OLS regression on each of the features to have a general comparison of the importance of certain features. 
 
 
 
