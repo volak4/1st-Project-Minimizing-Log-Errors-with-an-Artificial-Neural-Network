@@ -12,19 +12,27 @@ The project is divided into four sections, each section is described in a corres
 
 * **[Part 3: Regression and Feature Extraction](Section3_Regression.ipynb)** — In this section we run various types of regressions including Support Vector Regressions, Decision Tree Regressions and Random Forest Regressions. We will run model with and without dimensionality reduction to compare results. We will use Root Mean Square Error as a metric to compare model preformances. 
 
-* **[Part 4: Artifical Neural Network](NeuralNetwork.ipynb)** — we span the space with feed-forward neural networks. This section will be done with [TensorFlow](https://www.tensorflow.org/) (acting as a backend) and [Keras](https://keras.io/) (acting as a frontend). We introduce (and show by example) the concept of overfitting, use K-Fold cross-validation to compare the performance of our models, tune hyper-parameters (number of units, dropout rates, optimizers) via Hyperopt and select the best model.
+* **[Part 4: Artifical Neural Network](Section4_NeuralNetwork.py)** — we span the space with feed-forward neural networks. This section will be done with [TensorFlow](https://www.tensorflow.org/) (acting as a backend) and [Keras](https://keras.io/) (acting as a frontend). We introduce (and show by example) the concept of overfitting, use K-Fold cross-validation to compare the performance of our models, tune hyper-parameters (number of units, dropout rates, optimizers) via Hyperopt and select the best model.
 
-* **[Part 5: XgBoost](XgBoost.ipynb)** — we will run the latest the most popular Machine learning algorithm and compare results.
+* **[Part 5: XgBoost](Section5_XGBoost.py)** — we will run the latest the most popular Machine learning algorithm and compare results.
 
-* **[Appendix A - Univariate Exploration of all Continous Features](AppendixA.py)** — We will take a univarte analysis of all continous features in the dataset. 
 
-* **[Appendix B - Univariate Exploration of all Categorical Features](AppendixB.py)** — We will take a univarte analysis of all categorical features in the dataset. 
 
-* **[Appendix C - Bivariate Exploration of all Continous Features](AppendixC.py)** — We will take a univarte analysis of all continous features in the dataset. 
+* **[Appendix A - Missing Values](Section6_AppendixA_MissingData.py)** — We analyze each feature that have missing values and designate a strategy specific to each. 
 
-* **[Appendix D - Bivariate Exploration of all Categorical Features](AppendixD.py)** — We will take a univarte analysis of all categorical features in the dataset. 
+* **[Appendix B - Ordinary Least Sqaures Exploration of All Features](Section6_AppendixB_UniCont.py)** — We will take a univarte analysis of all categorical features in the dataset. 
 
-* **[Appendix E - Ordinary Least Sqaures Exploration of All Features](AppendixE.py)** — We will take a univarte analysis of all categorical features in the dataset. 
+* **[Appendix C - Univariate Exploration of all Continous Features](Section6_AppendixC_UniCat.py)** — We will take a univarte analysis of all continous features in the dataset. 
+
+* **[Appendix D - Univariate Exploration of all Categorical Features](Section6_AppendixD_BiVarCont.py)** — We will take a univarte analysis of all categorical features in the dataset. 
+
+* **[Appendix E - Bivariate Exploration of all Continous Features](Section6_AppendixE_BiVarCat.py)** — We will take a univarte analysis of all continous features in the dataset. 
+
+* **[Appendix F - Bivariate Exploration of all Categorical Features](Section6_AppendixF_BiVarCat.py)** — We will take a univarte analysis of all categorical features in the dataset. 
+
+
+
+
 
 You can also read a [Capstone Report](report.md) which summarizes the implementation as well as the methodology of the whole project without going deep into details.
 
