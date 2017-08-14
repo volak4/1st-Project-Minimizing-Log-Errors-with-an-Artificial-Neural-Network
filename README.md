@@ -4,43 +4,42 @@
 
 This project provides a potential solution to [Zillow's Zestimate competition](https://www.kaggle.com/c/zillow-prize-1) on Kaggle. It's one of two Capstone project requirements for the Springboard data science program. The goal of this capstone project is not to win the competition but to provide an in depth experience in learning various machine learning algorithms. In particular, Neural Networks, Decision trees and XGBoost will be explored in this project. 
 
-The project is divided into four sections, each section is described in a corresponding Jupyter notebook. Your feedback on the notebooks is welcome!
+The project is divided into five sections, each section is described in a corresponding Jupyter notebook. We will use Root Mean Square Error to evaulate the different model performances. Your feedback on the notebooks is welcome!
 
-* **[Part 1: Data Exploration and Prepocessing](Section1_Data_PreprocessingExplore.ipynb)** — we get accustomed with Zillow's dataset and do basic data exploration using tools such as histograms and boxplots.
+* **[Section 1: Data Exploration and Prepocessing](Section1_Data_PreprocessingExplore.ipynb)** — we get accustomed with Zillow's dataset by quickly viewing the data structure and make necessary steps to prepare the dataset to used for the different models that will be run. A important step in the prepocessing step will be dealing with the missing data from the 52 potential features. We have designated an appendix to work through the details of how a missing data is handle. The output file from the Missing Data file will be used for section 2 through 5. 
 
-* **[Part 2: Feature Selection](Section2_FeatureSelection.ipynb)** — we get accustomed with Zillow's dataset and do basic data analysis: we collect basic statistics, plot a correlation matrix, compare train and test distributions.
+* **[Section 2: Feature Selection](Section2_FeatureSelection.ipynb)** — For this section will try to create a model whose result could be intrepretated. Of the three main feature selection categories, Filter, Wrapper and Embedded, we will focus on the Filter Method, i.e. Correlation and Ordinary Least Squares. 
 
-* **[Part 3: Regression and Feature Extraction](Section3_Regression.ipynb)** — In this section we run various types of regressions including Support Vector Regressions, Decision Tree Regressions and Random Forest Regressions. We will run model with and without dimensionality reduction to compare results. We will use Root Mean Square Error as a metric to compare model preformances. 
+* **[Section 3: Regression and Feature Extraction](Section3_Regression.ipynb)** — In this section we run various types of regressions including Support Vector Regressions, Decision Tree Regressions and Random Forest Regressions. Due to computational constraints we will run the Regression models after doing a Dimenionality reduction using a feature extraction technique. Though we originally planned on running PCA, Linear Discrimant Analysis and Kernel PCA our computing limitations only allowed us to run a PCA analysis. 
 
-* **[Part 4: Artifical Neural Network](Section4_NeuralNetwork.py)** — we span the space with feed-forward neural networks. This section will be done with [TensorFlow](https://www.tensorflow.org/) (acting as a backend) and [Keras](https://keras.io/) (acting as a frontend). We introduce (and show by example) the concept of overfitting, use K-Fold cross-validation to compare the performance of our models, tune hyper-parameters (number of units, dropout rates, optimizers) via Hyperopt and select the best model.
-
-* **[Part 5: XgBoost](Section5_XGBoost.py)** — we will run the latest the most popular Machine learning algorithm and compare results.
+* **[Section 4: Artifical Neural Network](Section4_NeuralNetwork.ipynb)** — We will use a standard neural network with backward propagation. In order to run this section of the notebook, we had to install [TensorFlow](https://www.tensorflow.org/) (acting as a backend) and [Keras](https://keras.io/) (acting as a frontend). We added a 10% dropout after every hiddne layer to minize the effects of overfitting. We also wanted to use a K-Fold cross validation to compare the performance of our model but due to processing power limitation we were only able to do a train test split on our dataset. It goes without saying that we were also unable to tune our model with Grid Search as well.
 
 
+* **[Section 5: XgBoost](Section5_XGBoost.ipynb)** — XgBoost is one of the most popular model in machine learning. It is also the most powerful implementation of gradient boosting. One of the major advantages of Xgboost besides having high performance and fast execution speed, you can keep the interpretation of the original problem. We were also unable to do a K-fold cross validation on our boosted model.
 
-* **[Appendix A - Missing Values](Section6_AppendixA_MissingData.py)** — We analyze each feature that have missing values and designate a strategy specific to each. 
 
-* **[Appendix B - Ordinary Least Sqaures Exploration of All Features](Section6_AppendixB_UniCont.py)** — We will take a univarte analysis of all categorical features in the dataset. 
+* **[Appendix A - Missing Values](Section6_AppendixA_MissingData.py)** — We have 59 features and most have missing values that need to be taken care of. Since each feature could be vital to providing an accurate model, we made decisions on imputing the missing value on a case by case analysis. Some features we given the mean, median or mode while others had specific needs such as imputing a random value holder. There were a few feature that had no values at all and were dropped from the dataset.  
 
-* **[Appendix C - Univariate Exploration of all Continous Features](Section6_AppendixC_UniCat.py)** — We will take a univarte analysis of all continous features in the dataset. 
+* **[Appendix B - Univariate Exploration of all Continous Features](Section6_AppendixB_UniCat.py)** — We will take a univarte analysis of all continous features in the dataset including the targetfeature. We will running histograms and check for outliers. 
 
-* **[Appendix D - Univariate Exploration of all Categorical Features](Section6_AppendixD_BiVarCont.py)** — We will take a univarte analysis of all categorical features in the dataset. 
+* **[Appendix C - Univariate Exploration of all Categorical Features](Section6_AppendixC_BiVarCont.py)** — We will take a univarte analysis of all categorical features in the dataset. Most of the graphcs will take the form of bar plots.  
 
-* **[Appendix E - Bivariate Exploration of all Continous Features](Section6_AppendixE_BiVarCat.py)** — We will take a univarte analysis of all continous features in the dataset. 
+* **[Appendix D - Bivariate Exploration of all Continous Features](Section6_AppendixD_BiVarCat.py)** — We will take a univarte analysis of all continous features in the dataset. 
 
-* **[Appendix F - Bivariate Exploration of all Categorical Features](Section6_AppendixF_BiVarCat.py)** — We will take a univarte analysis of all categorical features in the dataset. 
+* **[Appendix E - Bivariate Exploration of all Categorical Features](Section6_AppendixE_BiVarCat.py)** — We will take a univarte analysis of all categorical features in the dataset. 
 
 
 
 
 
-You can also read a [Capstone Report](report.md) which summarizes the implementation as well as the methodology of the whole project without going deep into details.
+You can also read a [Capstone Report](report.doc) which summarizes the implementation as well as the methodology of the whole project.
 
 ## Requirements
 
 ### Dataset
 
 The dataset consist of two files(properties_2016.csv.zip,train_2016_v2.csv.zip) and needs to be downloaded separately (~160 MB). Just unzip it in the same directory with notebooks. The dataset is available for free on [Kaggle's competition page](https://www.kaggle.com/c/zillow-prize-1/data).
+
 
 ### Software
 
@@ -54,11 +53,11 @@ This project uses the following software (if version number is omitted, latest v
 
 ## Guide to running this project
 
-### Option 1 - Setting up Desktop to run GPU (This project)
+### Option 1 - Setting up Desktop to run  Nvidia's GeForce 770 (This project)
 
 **Step 1. Install necessary drivers to use GPU**
 The desktop is running Windows 7 with the following installs:
-If you need the C++ complier, you can download it **[Appendix B](AppendiB - Histograms.ipynb)** 
+If you need the C++ complier, you can download it **[C++ Compiler](http://landinghub.visualstudio.com/visual-cpp-build-tools)** 
 
 * **cuda toolkit -** https://developer.nvidia.com/cuda-toolkit -  The NVIDIA® CUDA® Toolkit provides a development environment for creating high performance GPU-accelerated applications. With the CUDA Toolkit, you can develop, optimize and deploy your applications on GPU-accelerated embedded systems, desktop workstations, enterprise data centers, cloud-based platforms and HPC supercomputers. The toolkit includes GPU-accelerated libraries, debugging and optimization tools, a C/C++ compiler and a runtime library to deploy your application.
 
@@ -96,6 +95,6 @@ Please make sure you run Ubuntu 14.04. For Ireland region you can use this AMI: 
 
 `sudo apt-get install git`
 
-`cd ~; git clone https://github.com/volak/zillow_capstone.git`
+`cd ~; git clone https://github.com/volak/Zillow.git`
 
-`cd zillow_capstone`
+`cd Zillow_capstone`
