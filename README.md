@@ -2,9 +2,9 @@
 
 ## Structure
 
-This project provides a potential solution to [Zillow's Zestimate competition](https://www.kaggle.com/c/zillow-prize-1) on Kaggle. It's one of two Capstone project requirements for the Springboard data science program. The goal of this capstone project is not to win the competition but to provide an in depth experience in learning various machine learning algorithms. In particular, Neural Networks, Decision trees and XGBoost will be explored in this project. 
+This project provides a potential solution to [Zillow's Zestimate competition](https://www.kaggle.com/c/zillow-prize-1) on Kaggle. It's one of two Capstone project requirements for the Springboard data science program. The goal of this capstone project is not to win the competition but to provide an in depth experience in learning various machine learning algorithms. In particular, Regressions models such as Support Vector Regression, Decision Tree Regression and Random Forest Regressions. We will explore some Deep Learning alogrithms as well, such as Decision trees and XGBoost will be explored in this project. 
 
-The project is divided into five sections, each section is described in a corresponding Jupyter notebook. We also have 5 Appendixes written in just python coding. We will use Root Mean Square Error to evaulate the different model performances. Your feedback on the notebooks is welcome!
+The project is divided into five sections, each section is described in a corresponding Jupyter notebook. We also have 5 Appendixes written in just python coding and one Appendix written in Ipython Notebook. We will use Root Mean Square Error to evaulate the different model performances. Your feedback on the notebooks is welcome!
 
 * **[Section 1: Data Exploration and Prepocessing](Section1_Data_PreprocessingExplore.ipynb)** — we get accustomed with Zillow's dataset by quickly viewing the data structure and make necessary steps to prepare the dataset to used for the different models that will be run. A important step in the prepocessing step will be dealing with the missing data from the 52 potential features. We have designated an appendix to work through the details of how a missing data is handle. The output file from the Missing Data file will be used for section 2 through 5. 
 
@@ -28,7 +28,7 @@ The project is divided into five sections, each section is described in a corres
 
 * **[Appendix E - Bivariate Exploration of all Categorical Features](Section6_AppendixE_BiVarCat.py)** — We will take a univarte analysis of all categorical features in the dataset. 
 
-
+* **[Appendix F - OLS Regression of all features](Section6_AppendixF - OLS_Regression_of_All_Features.ipynb)** — Even though we know that it is highly unlikeyl that the features are independent of each other, we will run an OLS regression on each of the features to have a general comparison of the importance of certain features. 
 
 
 
