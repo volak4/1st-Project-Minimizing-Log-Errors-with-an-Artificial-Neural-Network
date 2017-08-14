@@ -42,10 +42,6 @@ You can also read a [Capstone Report](report.md) which summarizes the implementa
 
 The dataset consist of two files(properties_2016.csv.zip,train_2016_v2.csv.zip) and needs to be downloaded separately (~160 MB). Just unzip it in the same directory with notebooks. The dataset is available for free on [Kaggle's competition page](https://www.kaggle.com/c/zillow-prize-1/data).
 
-### Pretrained models
-
-To get the results quickly, the default option is to use pretrained models. At the beginning of XGBoost and MLP notebooks, there's a flag: `USE_PRETRAINED = True` which can be set to `False` to enable calculations. The default option (`True`)  just loads ready-to-use models from `pretrained` directory.
-
 ### Software
 
 This project uses the following software (if version number is omitted, latest version is recommended):
