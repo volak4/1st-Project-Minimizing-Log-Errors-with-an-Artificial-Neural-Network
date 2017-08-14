@@ -66,18 +66,18 @@ If you need the C++ complier, you can download it **[C++ Compiler](http://landin
 * **cuDNN 7 -** https://developer.nvidia.com/cudnn - cuDNN is a GPU-accelerated library of primitives for deep neural networks. cuDNN provides highly tuned implementations for standard routines such as forward and backward convolution, pooling, normalization, and activation layers.
 
 **Step 2. Install DeepLearning Packages using Conda**
-* **Theano -** '$ conda install -c conda-forge theano'
+* **Theano -** ' `conda install -c conda-forge theano`
 
 * **Tensorflow GPU- ** 
 
- "$ conda create -n tensorflow python=3.5"
+ `conda create -n tensorflow python=3.5`
  
- "$ activate tensorflow"
+ `activate tensorflow`
  
- "$ pip install --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-0.12.1-cp35-cp35m-win_amd64.whl"
+ `pip install --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-0.12.1-cp35-cp35m-win_amd64.whl`
 
 
-* **Keras -** $ conda install -c conda-forge keras 
+* **Keras -** `conda install -c conda-forge keras`
 
 ### Option 2 - Using AWS instances
 
