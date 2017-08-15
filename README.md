@@ -68,7 +68,7 @@ If you need the C++ complier, you can download it **[C++ Compiler](http://landin
 **Step 2. Install DeepLearning Packages using Conda**
 * **Theano -** ' `conda install -c conda-forge theano`
 
-* **Tensorflow GPU- ** 
+* **Tensorflow GPU-** 
 
  `conda create -n tensorflow python=3.5`
  
