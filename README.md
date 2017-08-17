@@ -113,7 +113,7 @@ The cheaper option to run the project is to use EC2 AWS instances:
 * `c4.8xlarge` CPU optimized instance for Feature Selection calculations (best for Part 2).
 * `EC2 g2.2xlarge` GPU optimized instance for MLP and ensemble calculations (best for Part 3). If you run an Ireland-based spot instance, the price will be about $0.65 per hour or you can use "Spot Instances" to help reduce cost.
 
-* http://markus.com/install-theano-on-aws/
+* For more detail instructions view the following link : http://markus.com/install-theano-on-aws/
 
 Please make sure you run Ubuntu 14.04. For Ireland region you can use this AMI: **ami-ed82e39e**. Also, add 30 GB of EBS volume 
 
