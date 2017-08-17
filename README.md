@@ -2,43 +2,63 @@
 
 ## Structure
 
-This project provides a potential solution to Zillow's Zestimate competition on Kaggle. It's one of two Capstone project requirements for the Springboard data science program. The goal of this capstone project is not to win the competition but to provide an in depth experience in learning various machine learning algorithms. In particular, Regressions models such as Support Vector Regression, Decision Tree Regression, and Random Forest Regressions. We will explore some Deep Learning algorithms as well, such as Decision trees and XGBoost will be explored in this project.
+This project provides a potential solution to **[Zillow's Zestimate competition](https://www.kaggle.com/c/zillow-prize-1)** on Kaggle. The goal of this capstone project is not to win the competition but to provide an in depth experience in learning various machine learning algorithms. In particular, Regression models such as Support Vector Regression, Decision Tree Regression, and Random Forest Regressions. We will also explore some Deep Learning algorithms through the use of Artificial Neural Networks. We used the most power gradient boosting algorithm, XGBoost for its performance and execution speed.
 
 
-The project is divided into five sections, each section is described in a corresponding Jupyter notebook. We also have 5 Appendixes written in just python coding and one Appendix written in Ipython Notebook. We will use Root Mean Square Error to evaluate the different model performances. Your feedback on the notebooks is welcome!
+The project is divided into five sections and six appendices. Section 3 deals with regressions and is further divided into the various types of regressions used in this project. The Jupyter notebooks sometimes contain a summary of the work done with a detailed analysis provided in the appendix. We will use Root Mean Square Error to evaluate the different model performances. Your feedback on the notebooks is welcome!
 
-* **[Section 1: Data Exploration and Prepocessing](Section1_Data_PreprocessingExplore.ipynb)** —we get accustomed with Zillow's dataset by quickly viewing the data structure and make necessary steps to prepare the dataset to use for the different models that will be run. An important step in the preprocessing step will be dealing with the missing data from the 52 potential features. We have designated an appendix to work through the details of how a missing data is handled. The output file from the Missing Data file will be used for section 2 through 5. 
-
-* **[Section 2: Feature Selection](Section2_FeatureSelection.ipynb)** — For this section will try to create a model whose result could be interpreted. Of the three main feature selection categories, Filter, Wrapper and Embedded, we will focus on the Filter Method, i.e. Correlation and Ordinary Least Squares. 
-
-* **[Section 3: Linear Regression and Feature Extraction](Section3_Regression.ipynb)** — In this section, we run various types of regressions including Support Vector Regressions, Decision Tree Regressions, and Random Forest Regressions. Due to computational constraints, we will run the Regression models after doing a Dimensionality reduction using a feature extraction technique. Though we originally planned on running PCA, Linear Discriminant Analysis and Kernel PCA our computing limitations only allowed us to run a PCA analysis. 
-
-* **[Section 3b: Support Vector Regression(SVR)](Section3b_SVR.ipynb)** — We will use a Support Vector regression to check for non-linear models. Before we can use our Support Vector Regression we have to make sure our features are all scaled. Some regression classes include a feature scaling algorithm, like the multiple regression above, but our Support Vector Regression does not. We had to fit transform both the feature and response variables before we produce our predictions.   For our Support Vector Regression, we chose a Gaussian kernel.  
-
-* **[Section 3c: Decision Trees](Section3c_DecisionTree.ipynb)** — Using another non linear regression on the dataset. The Decision tree regression to the one use for classification in that it uses entropy as a metric of determining whether certain features provide added information to the model. The Decision tree builds regression model by breaking down a dataset into smaller and smaller subsets while at the same time an associated decision tree is incrementally developed. The overall structure of a decision tree includes a decision node and a leaf node. The decision has two or more branches that each represent the value of the feature tested while the leaf node represents the decision target. Decision trees can handle both numerical and categorical data. 
-
-* **[Section 3d: Random Forest](Section3d_RandomForest.ipynb)** — Similar to the Decision Tree, the first step of a Random forest is to first find the feature that gives the most information gain when splitting on a given value of that feature. The second step is to find the next feature that gives the most information gain. Unlike a Decision tree that continuously add branches by adding features, a Random forest will randomly choose a feature and start another tree with a different combinations of features to start the tree. This will help counter the tendency to overfitting. 
-
-* **[Section 4: Artifical Neural Network](Section4_NeuralNetwork.ipynb)** — We will use a standard neural network with backward propagation. In order to run this section of the notebook, we had to install [TensorFlow](https://www.tensorflow.org/) (acting as a backend) and [Keras](https://keras.io/) (acting as a frontend). We added a 10% drop out after every hidden layer to minimize the effects of overfitting. We also wanted to use a K-Fold cross validation to compare the performance of our model but due to processing power limitation, we were only able to do a train test split on our dataset. It goes without saying that we were also unable to tune our model with Grid Search as well.
-
-* **[Section 5: XgBoost](Section5_XGBoost.ipynb)** — XgBoost is one of the most popular models in machine learning. It is also the most powerful implementation of gradient boosting. One of the major advantages of Xgboost besides having high performance and fast execution speed, you can keep the interpretation of the original problem. We were also unable to do a K-fold cross validation on our boosted model.
+Even though we had access to a relatively powerful computer which took advantage of the GPU, we ran into computational constraints that limit our analysis. We first ran all the desired algorithms on a small "slice" of the dataset but got memory errors when trying to run those same algorithms on the full dataset. 
 
 
-* **[Appendix A - Missing Values](Section6_AppendixA_MissingData.py)** — We have 59 features and most have missing values that need to be taken care of. Since each feature could be vital to providing an accurate model, we made decisions on imputing the missing value on a case by case analysis. Some features we gave the mean, median or mode while others had specific needs such as imputing a random value holder. There was a few feature that had no values at all and was dropped from the dataset.
+* **[Section 1: Data Exploration and Prepocessing](Section1_Data_PreprocessingExplore.ipynb)** —we get accustomed with Zillow's dataset by quickly viewing the data structure and make necessary steps to prepare the dataset to use for the different algorithms that will be run. An important step in the preprocessing step will be dealing with the missing data from the 59 potential features. We have designated an appendix to work through the details of how a missing data is handled. The output file from the Missing Data file will be used for section 2 through 5. 
 
-* **[Appendix B - Univariate Exploration of all Continous Features](Section6_AppendixB_UniCat.py)** — We will take a univariate analysis of all continuous features in the dataset including the target feature. We will be running histograms and check for outliers. 
 
-* **[Appendix C - Univariate Exploration of all Categorical Features](Section6_AppendixC_BiVarCont.py)** — We will take a univariate analysis of all categorical features in the dataset. Most of the graphics will take the form of bar plots.
+* **[Section 2: Feature Selection](Section2_FeatureSelection.ipynb)** — For this section will try to create an optimal model by eliminated dependent variables that do not help explain the variance in the model. This method allows interpreting the importance of each remaining variable as it pertains to our target variable. There are 3 three main feature selection methods, Filter, Wrapper and Embedded method. Of these methods, we will focus on the Filter Method, i.e. Correlation and Ordinary Least Squares. 
 
-* **[Appendix D - Bivariate Exploration of all Continous Features](Section6_AppendixD_BiVarCat.py)** — We will take a univariate analysis of all continuous features in the dataset.
 
-* **[Appendix E - Bivariate Exploration of all Categorical Features](Section6_AppendixE_BiVarCat.py)** — — We will take a univariate analysis of all categorical features in the dataset.
+* **[Section 3a: Linear Regression and Feature Extraction](Section3a_Regression.ipynb)** — In this section, we will run a multiple linear regression as our baseline model to compare to other algorithms we will run later. We will also Feature Extraction techniques in this section. Of the 3 feature extraction techniques, Principal Component Analysis, Linear Discriminant Analysis and Kernal PCA, we were only able to do PCA on the full dataset. 
+
+
+* **[Section 3b: Support Vector Regression(SVR)](Section3b_SVR.ipynb)** — We will use a Support Vector regression to check for nonlinear models. Before we can use our Support Vector Regression we have to make sure our features are all scaled. Some regression classes include a feature scaling algorithm, like the multiple regression above, but our Support Vector Regression does not. We had to fit transform both the feature and response variables before we produce our predictions.   For our Support Vector Regression, we chose a Gaussian kernel.  
+
+
+* **[Section 3c: Decision Tree Regression](Section3c_DecisionTree.ipynb)** — Using another nonlinear regression on the dataset. The Decision tree regression is similar to the one used for classification in that it uses entropy as a metric of determining whether certain features provide added information to the model. The Decision tree builds regression model by breaking down a dataset into smaller and smaller subsets while at the same time an associated decision tree is incrementally developed. The overall structure of a decision tree includes a decision node and a leaf node. The decision has two or more branches that each represent the value of the feature tested while the leaf node represents the decision target. Decision trees can handle both numerical and categorical data. 
+
+
+* **[Section 3d: Random Forest Regression](Section3d_RandomForest.ipynb)** — Similar to the Decision Tree, the first step of a Random forest is to first find the feature that gives the most information gain when splitting on a given value of that feature. The second step is to find the next feature that gives the most information gain. Unlike a Decision tree that continuously adds branches by adding features, a Random forest will randomly choose a feature and start another tree with a different combination of features. This will help counter the tendency to overfitting. 
+
+
+* **[Section 4: Artifical Neural Network](Section4_NeuralNetwork.ipynb)** — We will use a standard neural network with backward propagation. In order to run this section of the notebook, we had to install Google's Deep Learning platform, [TensorFlow](https://www.tensorflow.org/) (acting as a backend) and [Keras](https://keras.io/) (acting as a frontend). We added a 10% drop out after every hidden layer to minimize the effects of overfitting. We also wanted to use a K-Fold cross validation to compare the performance of our model but due to processing power limitation, we were only able to do a train test split on our dataset. We were also unable to optimally tune the hyper-parameters of our model with Grid Search.
+
+
+* **[Section 5: XgBoost](Section5_XGBoost.ipynb)** — XgBoost is one of the most popular models in machine learning. It is also the most powerful implementation of gradient boosting. One of the major advantages of Xgboost besides having high performance and fast execution speed, you can keep the interpretation of the original problem.  We were unable to do a K-fold cross validation  with our limited computational power.
+
+
+
+
+
+* **[Appendix A - Missing Values](Section6_AppendixA_MissingData.py)** — We have 59 features and most have missing values that need to be taken care of. Since each feature could be vital to providing an accurate model, we made decisions on imputing the missing value on a case by case analysis. Some features we gave the mean, median or mode while others had specific needs such as imputing a random value holder. There were a few features that had no values at all and was dropped from the dataset.
+
+
+* **[Appendix B - Univariate Exploration of all Continous Features](Section6_AppendixB_UniCat.py)** — We will take a univariate analysis of all continuous features in the dataset including the target feature. We generate histograms and check for outliers. 
+
+
+* **[Appendix C - Univariate Exploration of all Categorical Features](Section6_AppendixC_BiVarCont.py)** — We will take a univariate analysis of all categorical features in the dataset. Most of the analysis will take the form of bar plots.
+
+
+* **[Appendix D - Bivariate Exploration of all Continous Features](Section6_AppendixD_BiVarCat.py)** — We will take a bivariate analysis of all continuous features in the dataset.
+
+
+* **[Appendix E - Bivariate Exploration of all Categorical Features](Section6_AppendixE_BiVarCat.py)** — We will take a bivariate analysis of all categorical features in the dataset.
+
 
 * **[Appendix F - OLS Regression of all features](Section6_AppendixF_OLS_Regression_of_All_Features.ipynb)** — Even though we know that it is highly unlikely that the features are independent of each other, we will run an OLS regression on each of the features to have a general comparison of the importance of certain features.
 
 
 
 You can also read a [Capstone Report](report.doc) which summarizes the implementation as well as the methodology of the whole project.
+
+
 
 ## Requirements
 
@@ -63,7 +83,7 @@ This project uses the following software (if version number is omitted, latest v
 
 **Step 1. Install necessary drivers to use GPU**
 The desktop is running Windows 7 with the following installs:
-If you need the C++ compiler, you can download it **[C++ Compiler](http://landinghub.visualstudio.com/visual-cpp-build-tools)** 
+If you need the C++ compiler, you can download it here (**[C++ Compiler](http://landinghub.visualstudio.com/visual-cpp-build-tools)**) 
 
 * **cuda toolkit -** https://developer.nvidia.com/cuda-toolkit -  The NVIDIA® CUDA® Toolkit provides a development environment for creating high performance GPU-accelerated applications. With the CUDA Toolkit, you can develop, optimize and deploy your applications on GPU-accelerated embedded systems, desktop workstations, enterprise data centers, cloud-based platforms and HPC supercomputers. The toolkit includes GPU-accelerated libraries, debugging and optimization tools, a C/C++ compiler and a runtime library to deploy your application.
 
@@ -101,6 +121,6 @@ Please make sure you run Ubuntu 14.04. For Ireland region you can use this AMI: 
 
 `sudo apt-get install git`
 
-`cd ~; git clone https://github.com/volak/Zillow.git`
+`cd ~; git clone https://github.com/volak4/Zillow.git`
 
-`cd Zillow_capstone`
+`cd Zillow`
