@@ -56,7 +56,7 @@ Even though we had access to a relatively powerful computer which took advantage
 
 
 
-You can also read a [Capstone Report](report.docx) which summarizes the implementation as well as the methodology of the whole project.
+You can also read a [Capstone Report](report.pdf) which summarizes the implementation as well as the methodology of the whole project.
 
 
 
