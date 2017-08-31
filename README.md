@@ -1,4 +1,4 @@
-# Zillow’s Home Value Prediction (Capstone Project One)
+# Zillow’s Home Value Prediction with a Neural Network
 
 ## Structure
 
