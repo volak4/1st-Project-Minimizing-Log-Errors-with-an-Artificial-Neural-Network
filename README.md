@@ -2,7 +2,7 @@
 
 ## Structure
 
-This project provides a potential solution to **[Zillow's Zestimate competition](https://www.kaggle.com/c/zillow-prize-1)** on Kaggle. The goal of this capstone project is not to win the competition but to provide an in depth experience in learning various machine learning algorithms. In particular, Regression models such as Support Vector Regression, Decision Tree Regression, and Random Forest Regressions were used for this project. We will also explore some Deep Learning algorithms through the use of Artificial Neural Networks. We used the most powerful gradient boosting algorithm, XGBoost for its performance and execution speed.
+This project provides a potential solution to **[Zillow's Zestimate competition](https://www.kaggle.com/c/zillow-prize-1)** on Kaggle. The goal of this capstone project is not to win the competition but to provide an in depth experience in learning various machine learning algorithms(link to [Final Report](report.pdf). In particular, Regression models such as Support Vector Regression, Decision Tree Regression, and Random Forest Regressions were used for this project. We will also explore some Deep Learning algorithms through the use of Artificial Neural Networks. We used the most powerful gradient boosting algorithm, XGBoost for its performance and execution speed.
 
 
 The project is divided into five sections and six appendices. Section 3 deals with regressions and is further divided into the various types of regressions used in this project. The Jupyter notebooks sometimes contain a summary of the work done with a detailed analysis provided in the appendix. We will use Root Mean Square Error to evaluate the different model performances. Your feedback on the notebooks is welcome!
@@ -56,7 +56,7 @@ Even though we had access to a relatively powerful computer which took advantage
 
 
 
-You can also read a [Capstone Report](report.pdf) which summarizes the implementation as well as the methodology of the whole project.
+You can also read a [Final Report](report.pdf) which summarizes the implementation as well as the methodology of the whole project.
 
 
 
